@@ -28,7 +28,13 @@
     }
   </script>
   <style>
-    .link-underline { background-image: linear-gradient(currentColor, currentColor); background-position: 0% 100%; background-repeat: no-repeat; background-size: 0% 2px; transition: background-size .25s ease; }
+    .link-underline {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .25s ease;
+    }
     .link-underline:hover { background-size: 100% 2px; }
   </style>
   <script>
@@ -66,7 +72,10 @@
       <div>
         <p class="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">Junior Backend Engineer</p>
         <h1 class="mt-2 text-4xl/tight md:text-5xl/tight font-extrabold">Building <span class="text-brand-600">robust</span> APIs & cloud-native systems</h1>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl">Junior Backend Engineer with ~3 years of experience in system architecture, microservices, and high-availability backends. I enjoy designing clean services that scale.</p>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl">
+          Junior Backend Engineer with ~3 years of experience in system architecture, microservices, and high-availability backends.
+          I enjoy designing clean services that scale.
+        </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#projects" class="px-4 py-2 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-soft">View Projects</a>
           <a href="#contact" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
@@ -82,13 +91,15 @@
 
       <!-- Right side (photo) -->
       <div class="flex justify-center">
-        <img src="dd4a35eb-316d-4534-bade-569efe304eec.jpg" alt="Khaled Hany" class="rounded-2xl shadow-soft w-80 h-auto object-cover border border-slate-200 dark:border-slate-800">
+        <img src="https://github.com/KhaledHany551/KhaledHany551.github.io/raw/main/WhatsApp%20Image%202025-10-31%20at%2021.19.37_0c646a88.jpg"
+             alt="Khaled Hany"
+             class="rounded-2xl shadow-soft w-80 h-auto object-cover border border-slate-200 dark:border-slate-800">
       </div>
     </div>
   </section>
 
-  <!-- باقي الكود بتاع المشاريع والسكيلز والكونتاكت -->
-  <!-- (يفضل تسيب باقي الأقسام زي ما هي من ملفك الحالي لأنها مش محتاجة تعديل) -->
+  <!-- باقي الأقسام هنا -->
+  <!-- projects, skills, contact... -->
 
   <script>
     document.getElementById('themeToggle').addEventListener('click', () => {
@@ -96,7 +107,6 @@
       root.classList.toggle('dark');
       localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
