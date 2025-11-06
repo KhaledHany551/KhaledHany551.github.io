@@ -30,17 +30,17 @@
     }
   </script>
   <style>
-    /* Smooth underline */
     .link-underline { background-image: linear-gradient(currentColor, currentColor); background-position: 0% 100%; background-repeat: no-repeat; background-size: 0% 2px; transition: background-size .25s ease; }
     .link-underline:hover { background-size: 100% 2px; }
   </style>
   <script>
-    // Dark mode remember
     const mode = localStorage.getItem('theme');
     if (mode === 'dark') document.documentElement.classList.add('dark');
   </script>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+
+  <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/50 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="font-extrabold tracking-tight text-xl">Khaled <span class="text-brand-600">Hany</span></a>
@@ -51,21 +51,22 @@
         <a href="#contact" class="hover:text-brand-600">Contact</a>
       </nav>
       <div class="flex items-center gap-2">
-        <a href="#contact" class="hidden sm:inline-flex px-3 py-2 rounded-xl bg-brand-600 text-white font-semibold shadow-soft hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-400">Hire me</a>
+        <a href="#contact" class="hidden sm:inline-flex px-3 py-2 rounded-xl bg-brand-600 text-white font-semibold shadow-soft hover:bg-brand-700">Hire me</a>
         <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
-          <svg id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 hidden dark:inline"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zm10.48 14.32l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 4V1h-0v3zm0 19v-3h0v3zM4 12H1v0h3zm19 0h-3v0h3zM6.76 19.16l-1.8 1.79-1.79-1.79 1.79-1.79 1.8 1.79zM19.16 6.76l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79z"/><circle cx="12" cy="12" r="5"/></svg>
-          <svg id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 dark:hidden"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 hidden dark:inline"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zm10.48 14.32l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 4V1h-0v3zm0 19v-3h0v3zM4 12H1v0h3zm19 0h-3v0h3zM6.76 19.16l-1.8 1.79-1.79-1.79 1.79-1.79 1.8 1.79zM19.16 6.76l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79z"/><circle cx="12" cy="12" r="5"/></svg>
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 dark:hidden"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         </button>
       </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="relative">
     <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <p class="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">Junior Backend Engineer</p>
-        <h1 class="mt-2 text-4xl/tight md:text-5xl/tight font-extrabold">Building <span class="text-brand-600">robust</span> APIs & cloud‑native systems</h1>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl">Junior Backend Engineer with ~3 years of experience in system architecture, microservices, and high‑availability backends. I enjoy designing clean services that scale.</p>
+        <h1 class="mt-2 text-4xl/tight md:text-5xl/tight font-extrabold">Building <span class="text-brand-600">robust</span> APIs & cloud-native systems</h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl">Junior Backend Engineer with ~3 years of experience in system architecture, microservices, and high-availability backends. I enjoy designing clean services that scale.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#projects" class="px-4 py-2 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-soft">View Projects</a>
           <a href="#contact" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
@@ -75,235 +76,46 @@
           <span>•</span>
           <a class="link-underline" href="tel:+201158807540">+20 115 880 7540</a>
           <span>•</span>
+          <!-- ✅ Correct LinkedIn -->
           <a class="link-underline" href="https://www.linkedin.com/in/khaled-hany-94a6992b5" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="relative">
-        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-600/10 to-slate-100 dark:from-brand-600/20 dark:to-slate-900 border border-slate-200 dark:border-slate-800 p-1">
-          <div class="h-full w-full rounded-xl bg-white/70 dark:bg-slate-950/60 backdrop-blur flex items-center justify-center">
-            <div class="grid grid-cols-3 gap-3 p-6 w-full">
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">Core</p>
-                <p class="font-semibold">REST APIs</p>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">Cloud</p>
-                <p class="font-semibold">AWS • Azure • GCP</p>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">Infra</p>
-                <p class="font-semibold">Docker • K8s • Nginx</p>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">Auth</p>
-                <p class="font-semibold">JWT • RBAC • bcrypt</p>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">Langs</p>
-                <p class="font-semibold">Python • Node.js • Go</p>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                <p class="text-xs text-slate-500">DB/Cache</p>
-                <p class="font-semibold">Postgres • Redis</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section id="projects" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/30 border-t border-b border-slate-200/60 dark:border-slate-800">
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 border-t border-slate-200 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-end justify-between gap-4 mb-8">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Featured Projects</h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400">Selection of backend builds & services</p>
-      </div>
-
+      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">User Management System</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Secure API with JWT authentication and role‑based access control.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Python / Node.js</span>
-            <span>JWT • RBAC</span>
-          </div>
+
+        <article class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold text-brand-600">User Management System</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">Built with Django REST Framework — role-based authentication, CRUD operations, and JWT security.</p>
         </article>
 
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">E‑Commerce REST API</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Auth, product management, orders & payments — RESTful architecture.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Node.js</span>
-            <span>REST • Postgres</span>
-          </div>
+        <article class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold text-brand-600">E-Commerce REST API</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">FastAPI backend for an online store with PostgreSQL, Redis cache, and payment gateway integration.</p>
         </article>
 
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">Blog API</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Scalable CRUD, comments, and pagination with clean architecture.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Python</span>
-            <span>FastAPI</span>
-          </div>
-        </article>
-
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">Analytics / Dashboard API</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">High‑performance aggregates with Redis caching for speed.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Go</span>
-            <span>Redis • Aggregations</span>
-          </div>
-        </article>
-
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">Authentication Microservice</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Centralized auth with JWT & bcrypt; designed for microservices.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Node.js</span>
-            <span>JWT • bcrypt</span>
-          </div>
-        </article>
-
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">Invoice / Billing System</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Automated billing with PDF generation and precise calculations.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Python</span>
-            <span>Reports • PDFs</span>
-          </div>
-        </article>
-
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">URL Shortener API</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Links with analytics and expiration controls, built for scale.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Go</span>
-            <span>Redis • Short IDs</span>
-          </div>
-        </article>
-
-        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 hover:shadow-soft transition">
-          <h3 class="font-bold text-lg">Portfolio Backend API</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Dynamic content and contact form API to power this site.</p>
-          <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-            <span>Python</span>
-            <span>FastAPI</span>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Skills & Tools</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950">
-          <h3 class="font-semibold">Skills</h3>
-          <ul class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-            <li>Object‑Oriented Programming (OOP)</li>
-            <li>Data Structures</li>
-            <li>Machine Learning, Data Science, Statistics</li>
-            <li>Digital Marketing</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950">
-          <h3 class="font-semibold">Cloud & Infra</h3>
-          <ul class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-            <li>AWS, Azure, Google Cloud</li>
-            <li>Docker, Kubernetes (K8s)</li>
-            <li>Nginx / Apache</li>
-            <li>Postgres, Redis</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950">
-          <h3 class="font-semibold">Programming</h3>
-          <ul class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-            <li>Python</li>
-            <li>JavaScript (Node.js)</li>
-            <li>Go (Golang)</li>
-            <li>Java • C# (.NET) • PHP</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/30 border-t border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-2">
-        <h2 class="text-2xl md:text-3xl font-extrabold">About</h2>
-        <p class="mt-4 text-slate-600 dark:text-slate-300">I design backend systems with a focus on clarity, performance, and maintainability. My goals include architecting resilient microservices and mentoring teams to ship reliable software.</p>
-        <div class="mt-6 grid sm:grid-cols-2 gap-4">
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5">
-            <h3 class="font-semibold">Education</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">B.Sc. Computer Science – Artificial Intelligence<br/>Zagazig University<br/>Expected Graduation: 2026</p>
-          </div>
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5">
-            <h3 class="font-semibold">Certifications</h3>
-            <ul class="mt-2 text-sm text-slate-600 dark:text-slate-400 list-disc list-inside">
-              <li>ITI – BI Specialist</li>
-              <li>ITI Full Stack Using Python</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <aside class="md:pl-6">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6">
-          <h3 class="font-semibold">Quick Info</h3>
-          <ul class="mt-3 text-sm space-y-2">
-            <li><span class="text-slate-500">Location:</span> Egypt</li>
-            <li><span class="text-slate-500">Role:</span> Junior Backend Engineer</li>
-            <li><span class="text-slate-500">Open to:</span> Internships • Junior roles • Freelance</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section id="contact" class="py-16 md:py-24">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Get in touch</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Have a role or project that fits? I’d love to talk.</p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-        <a href="mailto:khaledhany6688@gmail.com" class="px-4 py-2 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700">Email</a>
-        <a href="tel:+201158807540" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Call</a>
-        <a href="https://www.linkedin.com/in/khaled-hany-94a6992b5" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-wrap items-center justify-between gap-4">
-      <p>© <span id="year"></span> Khaled Hany. All rights reserved.</p>
-      <a href="#" class="link-underline">Back to top ↑</a>
-    </div>
+  <!-- Footer -->
+  <footer id="contact" class="py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+    <p class="text-slate-600 dark:text-slate-400 text-sm">© 2025 Khaled Hany. All rights reserved.</p>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Khaled Hany",
-    "jobTitle": "Junior Backend Engineer",
-    "email": "mailto:khaledhany6688@gmail.com",
-    "telephone": "+201158807540",
-    "address": {"@type": "PostalAddress", "addressCountry": "EG"},
-    "url": "https://www.linkedin.com/in/khaled-hany-94a6992b5"
-  }
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', () => {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
   </script>
 
-  <script>
-    // Theme toggle
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const root = document.documentElement;
-      root.classList.toggle('dark');
-      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-    });
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
